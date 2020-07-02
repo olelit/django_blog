@@ -1,0 +1,31 @@
+{% extends "block_templates/base.html" %}
+
+{% block title %}
+    Статьи
+{% endblock %}
+
+{% block page_title %}
+    Статьи
+{% endblock %}
+
+{% block content %}
+    {% for item in object_list %}
+        <div class="list_item flex">
+            <div><img class="image_list" src="{{ item.image.url }}" alt=""></div>
+            <div class="flex list_text">
+                <div>
+                    <div class="title">{{ item.title }}</div>
+                    <div class="small_text">Last edit: {{ item.edited_at }}</div>
+                </div>
+                <div>
+                    {{ item.body | truncatechars:150 }}
+                </div>
+            </div>
+            <div class="action-section flex">
+                <a class="edit" href="{% url 'note-update' slug=item.slug %}">Править</a>
+                <a class="delete" href="{% url 'note-delete' slug=item.slug %}">Удалить</a>
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock %}

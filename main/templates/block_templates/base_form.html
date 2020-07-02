@@ -1,0 +1,23 @@
+{% for field in form %}
+    <div class="form_item">
+        {% if field.field.widget.input_type == 'file' %}
+            {% include 'blocks/file_uploader.html' with field=field %}
+            {% for error in field.errors %}
+                <small class="form_error">{{ error }}</small>
+            {% endfor %}
+            <div class="form_help_text">
+                {{ field.help_text }}
+            </div>
+        {% else %}
+            {{ field.label_tag }}
+            {{ field }}
+            {% for error in field.errors %}
+                <small class="form_error">{{ error }}</small>
+            {% endfor %}
+            <div class="form_help_text">
+                {{ field.help_text }}
+            </div>
+        {% endif %}
+
+    </div>
+{% endfor %}

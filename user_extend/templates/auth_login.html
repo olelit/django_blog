@@ -1,0 +1,24 @@
+{% load static %}
+<div class="header__profile">
+    <div>
+        {% if user.is_authenticated %}
+            <img src="{% static 'img/default.png' %}" alt="">
+        {% else %}
+            <img src="{% static 'img/default.png' %}" alt="">
+        {% endif %}
+
+    </div>
+    <div class="auth_login__menu">
+        <ul>
+            {% if user.is_authenticated %}
+                <li class="username"><a href="#">{{user.username}}</a></li>
+                <li><a href="{% url 'create_note' %}">Добавить статью</a></li>
+                <li><a href="{% url 'logout' %}">Выйти</a></li>
+                <li><a href="#">3 ссылка</a></li>
+            {% else %}
+                <li><a href="{% url 'register_page' %}">Регистрация</a></li>
+                <li><a href="{% url 'login' %}">Авторизация</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</div>

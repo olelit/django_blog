@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %} | Note</title>
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/user_extend.css' %}">
+    <link rel="stylesheet" href="{% static 'css/file_uploader.css' %}">
+    <link href='https://cdn.jsdelivr.net/npm/froala-editor@3.1.1/css/froala_editor.pkgd.min.css' rel='stylesheet' type='text/css' />
+</head>
+<body>
+{% include "layout/header.html" %}
+<main>
+    <div class="breadcrumbs">
+        <ul>
+            <li class="section_breadcrumb"><a href="#">Домой</a></li>
+            <li class="section_breadcrumb"><a href="#">1 секция</a></li>
+            <li class="section_breadcrumb"><a href="#">2 секция</a></li>
+            <li class="section_breadcrumb"><a href="#">3 секция</a></li>
+            <li class="section_breadcrumb"><a href="#">4 секция</a></li>
+            <li class="end_breadcrumb"><a href="#">Текущая</a></li>
+        </ul>
+    </div>
+    <div class="page_title"><h1>{% block page_title %}{% endblock %}</h1></div>
+    {% block content %}{% endblock %}
+
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/froala-editor@3.1.1/js/froala_editor.pkgd.min.js'></script>
+    <script src="{% static 'js/file_uploader.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</main>
+{% include "layout/footer.html" %}
+</body>
+</html>

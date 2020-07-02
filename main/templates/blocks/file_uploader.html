@@ -1,0 +1,6 @@
+<div>{{ field.label }}</div>
+<div class="uploaded_image">
+    <img src="{{ field.value.url }}" alt="" data-upload="{{ field.id_for_label }}">
+</div>
+<div class="upload_file"><label class="bg_blue" for="{{ field.id_for_label }}">Загрузить</label></div>
+<div class="hidden upload_field">{{ field }}</div>

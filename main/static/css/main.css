@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+li{
+    list-style: none;
+}
+
+header{
+    background-color: #1c1919;
+    display: flex;
+    align-items: center;
+    padding: 1%;
+    justify-content: space-around;
+}
+
+main{
+    margin: 0 auto;
+    width: 75%;
+}
+
+.header__logo{
+
+}
+
+.header__logo h2{
+    color: white;
+}
+
+.header__menu{
+    width: 90%;
+}
+
+.header__menu ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header__profile{
+    width: 10%;
+}
+
+.header__profile img{
+    max-width: 30px;
+}
+
+.breadcrumbs{
+    margin: 10px 0 10px 0;
+}
+
+.breadcrumbs a{
+    color: black;
+}
+
+.section_breadcrumb a{
+    color: dodgerblue;
+    text-decoration: underline;
+}
+
+.breadcrumbs ul{
+    display: flex;
+}
+
+.breadcrumbs li{
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.section_breadcrumb::after{
+    content: "/";
+    padding-left: 2px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form_item{
+    display: flex;
+    flex-direction: column;
+    margin: 1% 0px 1% 0px;
+}
+
+.form_item input{
+    font-size: 20px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.form_help_text{
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.submit_button{
+    background: dodgerblue;
+    border: none;
+    width: 130px;
+    color: white;
+    cursor: pointer;
+}
+
+.form_error{
+    color: red;
+}
+
+.hidden{
+    display: none;
+}
+
+.bg_blue{
+        background: dodgerblue;
+}
+
+.image_list{
+    width: 200px;
+}
+
+.flex{
+    display: flex;
+}
+
+.list_item{
+    color: black;
+}
+
+.list_text{
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 10px;
+}
+
+.small_text{
+    font-size: 10px;
+}
+
+.title{
+    color: #f40000;
+    font-size: 20px;
+}
+
+.page_title{
+    margin: 10px 0 10px 0;
+}
+
+.detail_image{
+    justify-content: center;
+}
+
+.author{
+    color: #f40000;
+}
+
+.detail_page div{
+    margin-bottom: 20px;
+}
+
+.delete{
+    border-radius: 20px;
+    padding: 10px;
+    background-color: red;
+}
+
+.edit{
+    border: 3px solid red;
+    border-radius: 20px;
+    color: black;
+    padding: 5px;
+}
+
+.action-section{
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+

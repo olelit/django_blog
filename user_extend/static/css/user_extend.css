@@ -1,0 +1,11 @@
+.auth_login__menu{
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid;
+    right: 5%;
+}
+
+.auth_login__menu a{
+    color: black;
+}

@@ -1,0 +1,18 @@
+{% extends "block_templates/base.html" %}
+
+{% block content %}
+
+<!--<form method="post">-->
+<!--    {% csrf_token %}-->
+<!--    {% include "block_templates/base_form.html" %}-->
+<!--    <div class="form_item">-->
+<!--        <input class="submit_button" type="submit" value="Сохранить">-->
+<!--    </div>-->
+<!--</form>-->
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Login</button>
+</form>
+{% endblock %}

@@ -1,0 +1,15 @@
+<header>
+    <div class="header__logo">
+        <h2>Блокнот</h2>
+    </div>
+     <div class="header__menu">
+         <ul>
+             <li><a href="{% url 'list_note' %}">Статьи</a></li>
+             <li><a href="{% url 'my_notes' %}">Мои статьи</a>></li>
+             <li><a href="#">3 ссылка</a></li>
+             <li><a href="#">4 ссылка</a></li>
+             <li><a href="#">5 ссылка</a></li>
+         </ul>
+     </div>
+    {% include 'auth_login.html' %}
+</header>

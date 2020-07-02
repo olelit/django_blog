@@ -1,0 +1,13 @@
+.uploaded_image{
+    padding: 10px 0 10px 0;
+}
+
+.uploaded_image img{
+    width: 100px;
+    height: 100px;
+}
+
+.upload_file label{
+    padding: 5px;
+    color: white;
+}
