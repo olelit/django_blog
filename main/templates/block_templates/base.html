@@ -14,19 +14,11 @@
 {% include "layout/header.html" %}
 <main>
     <div class="breadcrumbs">
-        <ul>
-            <li class="section_breadcrumb"><a href="#">Домой</a></li>
-            <li class="section_breadcrumb"><a href="#">1 секция</a></li>
-            <li class="section_breadcrumb"><a href="#">2 секция</a></li>
-            <li class="section_breadcrumb"><a href="#">3 секция</a></li>
-            <li class="section_breadcrumb"><a href="#">4 секция</a></li>
-            <li class="end_breadcrumb"><a href="#">Текущая</a></li>
-        </ul>
+        {% block breadcrump %}
+        {% endblock %}
     </div>
     <div class="page_title"><h1>{% block page_title %}{% endblock %}</h1></div>
     {% block content %}{% endblock %}
-
-    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/froala-editor@3.1.1/js/froala_editor.pkgd.min.js'></script>
     <script src="{% static 'js/file_uploader.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
 </main>

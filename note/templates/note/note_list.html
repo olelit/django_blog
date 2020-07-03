@@ -8,6 +8,13 @@
     Статьи
 {% endblock %}
 
+{% block breadcrump %}
+    <ul>
+        <li class="section_breadcrumb"><a href="/">Главная</a></li>
+        <li class=""><span>Статьи</span></li>
+    </ul>
+{% endblock %}
+
 {% block content %}
 
 {% for item in object_list  %}

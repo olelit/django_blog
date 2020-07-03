@@ -8,6 +8,14 @@
     {{ object.title }}
 {% endblock %}
 
+{% block breadcrump %}
+    <ul>
+        <li class="section_breadcrumb"><a href="/">Главная</a></li>
+        <li class="section_breadcrumb"><a href="{% url 'list_note' %}">Статьи</a></li>
+        <li class=""><span>{{ object.title }}</span></li>
+    </ul>
+{% endblock %}
+
 {% block content %}
 
     <div class="detail_page">

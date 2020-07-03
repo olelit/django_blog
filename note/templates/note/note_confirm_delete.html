@@ -1,0 +1,20 @@
+{% extends "block_templates/base.html" %}
+
+{% block title %}
+    {{ object.title }}
+{% endblock %}
+
+{% block page_title %}
+    {{ object.title }}
+{% endblock %}
+
+{% block content %}
+
+<form method="post">{% csrf_token %}
+    <p>Are you sure you want to delete "{{ object }}"?</p>
+    <div class="form_item">
+        <input class="submit_button" type="submit" value="Удалить">
+    </div>
+</form>
+
+{% endblock %}
